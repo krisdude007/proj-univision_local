@@ -1,0 +1,62 @@
+<div class="fabmob_content-container">
+    <form class="form-horizontal fabmob_condensed-form" role="form">
+        <h3 class="text-center">Comienza Aqui&iacute;</h3>
+        <div class="form-group">
+            <input type="text" placeholder="Nombre" class="form-control fabmob_round-border-top" id="first-name" name="firstName" />
+            <span class="help-block hidden"></span>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Apellido" class="form-control" id="last-name" name="lastName" />
+            <span class="help-block hidden"></span>
+        </div>
+        <div class="form-group">
+            <input type="email" placeholder="Direcci&#243;n de correo electr&#243;nico" class="form-control" id="email" name="email" />
+            <span class="help-block hidden"></span>
+        </div>
+        <div class="form-group">
+            <input type="email" placeholder="Confirmar direcci&#243;n de correo electr&#243;nico" class="form-control" id="confirm-email" name="confirmEmail" />
+            <span class="help-block hidden"></span>
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="Contrase&#241;a" class="form-control" id="password" name="password" />
+            <span class="help-block hidden"></span>
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="Confirmar contrase&#241;a" class="form-control" id="repeat-password" name="repeatPassword" />
+            <span class="help-block hidden"></span>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="C&#243;digo postal/ZIP" class="form-control" id="zip-code" name="zipCode" />
+            <span class="help-block hidden"></span>
+        </div>
+        <div class="form-group">
+            <input id="fabmob_sign-up-date-input" type="date" placeholder="Fecha de nacimiento" class="form-control fabmob_round-border-bottom" id="birthday" name="birthday" />
+            <span class="help-block hidden"></span>
+        </div>
+        <div class="form-group">
+            <input id="fabmob_sign-up-terms-input" type="checkbox" value="true" id="terms-of-use" name="termsOfUse" />
+            <span id="fabmob_sign-up-terms-input-label">
+                Acepto los&nbsp;
+                <a href="/#terms_of_use">
+                    T&eacute;rminos de Uso
+                </a> &nbsp; &amp; &nbsp;
+                <a href="/#privacy_policy">
+                    Pol&iacute;tica de privacidad
+                </a>
+                &nbsp;y la&nbsp;
+                <a href="/#rules_and_regulations">
+                    Normas y Reglamentos
+                </a>
+            </span>
+            <span class="help-block hidden"></span>
+        </div>
+        <button type="submit" id="signUpButton" class="btn btn-block">Enviar</button>
+        <p id="fabmob_login-divider">o</p>
+        <a id="fabmob_btn-facebook" class="btn btn-block fabmob_btn-social">
+            Reg&iacute;strate con Facebook
+        </a>
+        <a id="fabmob_btn-twitter" class="btn btn-block fabmob_btn-social">
+            Reg&iacute;strate con Twitter
+        </a>
+    </form>
+</div>

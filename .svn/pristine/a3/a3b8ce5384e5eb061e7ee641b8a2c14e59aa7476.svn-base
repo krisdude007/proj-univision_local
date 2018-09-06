@@ -1,0 +1,4 @@
+<?php //todo - needs discussion to depart from mvc but it keeps everything down to 1 call in 1 place
+AdUtility::createAdRecord($ad);
+?>
+<a href="/Ad/click/adId/<?php echo $ad->id; ?>/url/<?php echo base64_encode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" target="_blank"><img src="/webassets/images/<?php echo $ad->filename; ?>"></a>

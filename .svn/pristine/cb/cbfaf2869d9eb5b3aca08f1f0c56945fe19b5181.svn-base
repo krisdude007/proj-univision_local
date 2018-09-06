@@ -1,0 +1,20 @@
+<div id="content">
+    <div style="text-align:left;width:545px;margin-left:auto;margin-right:auto;clear:both;">
+        <div style="text-align:center;padding-top: 50px;">
+            <div style="float:right; margin-top: 5px;"><a class="uploadButton" href="<?php echo Yii::app()->request->baseurl; ?>/questions" style="width:70px;text-align: center;margin-right: 40px;">ENVIAR</a></div>
+            <h1 style="margin-left:40px;">VIEWER VIDEOS</h1>
+            <div class="sorter" style="font-size:12px;margin-bottom:5px;">Ver por: &nbsp;&nbsp;
+                <a class="activeLink" href="<?php echo Yii::app()->request->baseurl; ?>/videos/recent">Más recientes</a> &nbsp;&nbsp;&nbsp;
+                <a href="<?php echo Yii::app()->request->baseurl; ?>/videos/views">Más vistos</a> &nbsp;&nbsp;&nbsp;
+                <a href="<?php echo Yii::app()->request->baseurl; ?>/videos/rating">Mejor calificados</a>
+            </div>
+        </div>
+        <div class="videoBlocks scroll-pane jspScrollable">
+            <?php
+            $this->renderPartial('/video/_blocks', array('videos' => $videos)
+            );
+            ?>
+        </div>
+    </div>
+    <div class="placeHolder"><b style="color:#636363; position:relative; top:300px;left: 35px;">160X600</b></div>
+</div>

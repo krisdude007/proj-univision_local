@@ -1,0 +1,84 @@
+@font-face {
+    font-family: hnbc, arial narrow, verdana, tahoma;
+    src: local(hncb), url('/webassets/fonts/HelveticaNeueBoldCon.otf') format('opentype');
+}
+
+a{color:#008711}
+a img{border:none}
+h1{font-size:53px;}
+
+
+.main{
+    width:980px;
+    margin: 0 auto;
+    color:#fff;
+    position: absolute;
+}
+
+#head{
+    background-image:url('/webassets/images/header.png');
+    width:980px;
+    height:74px;
+}
+
+#content{
+    width:980px;
+    height:626px;
+    background-image:url('/webassets/images/bg.png');
+}
+
+.green{
+    background-color: #008711;
+}
+
+.red{
+    background-color:#c64a4a;
+}
+
+#nav{
+    margin:0 auto;
+    text-transform:uppercase;
+    color:#fff;
+    clear:both;
+    width:370px;
+}
+
+#nav ul{
+    
+}
+
+#nav li{
+    background-color: #008711;
+    float:left;
+    padding:6px 14px;
+}
+
+#site-index #linkHome{
+    background-color:#c64a4a;
+}
+
+#footer{
+    color:#fff;
+    font-size:9px;
+    text-align: center;
+    width:980px;
+    position:absolute;
+    bottom:6px;
+}
+
+#popupWrap{
+    background-image: url('/webassets/images/shadow.png');
+    width: 980px;
+    height: 437px;
+    position: absolute;
+    font-family:helvetica,arial,sans-serif;
+    font-family:hn;
+    z-index: 2;
+    margin-top: 176px;
+    display:none;
+    left: 50%;
+    margin-left: -490px;
+}
+#popupWrap h2{
+    font-size:21px;
+}

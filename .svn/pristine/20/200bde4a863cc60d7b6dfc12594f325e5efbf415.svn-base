@@ -1,0 +1,12 @@
+<div class="fabmob_content-container">
+    <h2 id="fabmob_home-header" class="text-center">&iexcl;Bienvenido a Because Futbol!</h2>
+    <p id="fabmob_home-copy" class="text-center">
+        Univisi&oacute;n Deportes te invita a ser parte de nuestro documental, una historia de f&uacute;tbol, contada a trav&eacute;s de fan&aacute;ticos de todas partes del mundo. &iexcl; Regístrate YA! Sube uno o varios videos y se parte de un documental de la gente, para la gente.
+    </p>
+    <?php if (Yii::app()->user->isGuest): ?>
+        <a class="btn btn-block" target="_top" href="<?php UNIVISION_REDIRECT_URL.'http://futbol.univision.com/fifa-copa-mundial/porelfutbol/' ?>">Sube un video</a>
+        <?php else: ?>
+        <a class="btn btn-block" href="/question">Sube un video</a>
+    <?php endif; ?>
+    <a class="btn btn-block" href="/videos">Ver Videos</a>
+</div>

@@ -1,0 +1,34 @@
+<?php
+
+class clientQuestionController extends QuestionController {
+
+    public $layout = '//layouts/main';
+    public $user;
+    public $ticker; // used for ticker form shown on every page when user is logged in
+
+    public function actionIndex($type = 'video') {
+
+        if (strpos($_SERVER['HTTP_HOST'], 'univision.com') !== false && !empty($_COOKIE['ls'])) {      //email, password
+            $username = pack("H*", $_COOKIE['uv']);
+            $userRecord = eUser::model()->findByAttributes(array('username' => $username));
+            if (!is_null($userRecord)) {// check if user already exists
+                $userRecord->scenario = 'reset';
+                if (UserUtility::login($userRecord)) {
+                    AuditUtility::save($this, $_REQUEST);
+                    $this->redirect('/questions');
+                }
+            }
+        }
+         else{
+             $this->redirect('https://miembros.univision.com/crm/login?redir=http://youtoo.univision.com/login');
+         }
+        $this->render('index',
+            array(
+                'type' =>$type,
+                'questions' => eQuestion::model()->{$type}()->current()->findAll(),
+                'ad' => eAd::model()->findByPk(1),
+            )
+        );
+
+    }
+}

@@ -1,0 +1,9 @@
+<?php //todo - needs discussion to depart from mvc but it keeps everything down to 1 call in 1 place
+AdUtility::createAdRecord($ad);
+?>
+<<<<<<< .mine
+<a target="_blank"><img src="/webassets/images/<?php echo $ad->filename; ?>"></a>=======
+<a HREF="http://ad.doubleclick.net/jump/N9281.503.UNIVISION/B8070260.38;sz=1x1;ord=<?php echo time(); ?>?" style="position:absolute;">
+    <img SRC="http://ad.doubleclick.net/ad/N9281.503.UNIVISION/B8070260.38;sz=1x1;ord=<?php echo time(); ?>?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement">
+</a>
+<a href="/Ad/click/adId/<?php echo $ad->id; ?>/url/<?php echo base64_encode("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"); ?>" target="_blank"><img src="/webassets/images/<?php echo $ad->filename; ?>"></a>>>>>>>> .r4757

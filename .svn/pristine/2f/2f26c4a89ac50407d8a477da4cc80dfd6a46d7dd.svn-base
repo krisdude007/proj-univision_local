@@ -1,0 +1,25 @@
+<div id="fabmob_static-view">
+    <div class="fabmob_static-content-container">
+        <h4 class="fabmob_help-header">1er paso</h4>
+        <div style="font-size:14px;">
+            <b style="color:#636363;">Haz clic en “Grabar”  ¡Luz, cámara, acción!</b><br/>
+            Ponte frente a la cámara, habla claramente, sonríe, diviértete y enséñanos tu pasión por el fútbol.
+        </div>
+        <br/>
+        <h4 class="fabmob_help-header">2do paso</h4>
+        <div style="font-size:14px;">
+            <b style="color:#636363;">Describe tu video</b><br/>
+            Agrega el título, etiquetas/tags y descripción. No olvides revisarlo. Si no te gusta, puedes volver a grabarlo.
+        </div>
+        <br/>
+        <h4 class="fabmob_help-header">3er paso</h4>
+        <div style="font-size:14px;">
+            <b style="color:#636363;">Después de hacer clic en enviar</b>,<br/>
+            se te pedirá  que te registres si ya no lo has hecho!
+        </div>
+        <br/>
+        <p>
+            <a href="mailto:<?php echo CLIENT_SUPPORT_EMAIL; ?>" style="font-size: 12px;">Contáctanos</a>
+        </p>
+    </div>
+</div>

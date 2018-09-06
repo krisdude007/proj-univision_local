@@ -1,0 +1,27 @@
+<?php
+class clientSiteController extends SiteController
+{
+    public function actionIndex($order = 'recent'){
+        if(!Yii::app()->user->isGuest && $_COOKIE['loggedin'] == true){
+            $this->redirect('/questions');
+        }
+        else {
+            $this->redirect(UNIVISION_REDIRECT_URL . rawurlencode(Yii::app()->createAbsoluteUrl('question/index')));
+        }
+        $limit = 4;
+        switch ($order) {
+            case 'recent':
+                $criteria = new CDbCriteria();
+                $criteria->limit = $limit;
+                $videos = eVideo::model()->with('user')->accepted()->recent()->findAll($criteria);
+                break;
+            default:
+                $video = new eVideo;
+                $videos = $video->orderBy(NULL, $order, $limit);
+                break;
+        }
+        $this->render('index', array(
+            'videos' => $videos,
+        ));
+    }
+}

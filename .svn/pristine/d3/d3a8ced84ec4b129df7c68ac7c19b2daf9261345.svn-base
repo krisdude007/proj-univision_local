@@ -1,0 +1,60 @@
+<?php if (isset($videos)): ?>
+    <div id="content">
+        <div class="you">
+            <?php
+            $this->renderPartial('/user/_sidebar', array(
+                'user' => $user,
+                    )
+            );
+            ?>
+            <div class="verticalRule">
+            </div>
+            <div class="youContent">
+                <div style="text-align:left;width:545px">
+                    <div style="float:right; margin-top: 10px;"><!--<a class="uploadButton" href="/questions" style="width:90px; height: 25px; font-size: 18px;margin-right: 43px;text-align: center;">SUBIR</a>--></div>
+                    <h1 style="padding-top: 15px;">VIDEOS</h1>
+                    <div class="sorter" style="font-size:12px;margin-bottom:5px;">Ver por:
+                        <a class="activeLink" href="<?php echo Yii::app()->request->baseurl; ?>/user/video/<?php echo $user->id; ?>/recent">Más recientes</a> |
+                        <a href="<?php echo Yii::app()->request->baseurl; ?>/user/video/<?php echo $user->id; ?>/views">Más vistos</a> |
+                        <a href="<?php echo Yii::app()->request->baseurl; ?>/user/video/<?php echo $user->id; ?>/rating">Mejor calificados</a>
+                    </div>
+                    <div class="videoBlocks scroll-pane jspScrollable">
+                        <?php
+                        $this->renderPartial('/video/_blocks', array('videos' => $videos)
+                        );
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php else: ?>
+    <div id="content">
+        <div class="you">
+            <?php
+            $this->renderPartial('/user/_sidebar', array(
+                'user' => $user,
+                    )
+            );
+            ?>
+            <div class="verticalRule">
+            </div>
+            <div class="youContent">
+                <div style="text-align:left;width:545px">
+                    <h1>FOTOS</h1>
+                    <div class="sorter" style="font-size:12px;margin-bottom:5px;">Ver por:
+                        <a class="activeLink" href="<?php echo Yii::app()->request->baseurl; ?>/user/image/<?php echo $user->id; ?>/recent">Más recientes</a> |
+                        <a href="<?php echo Yii::app()->request->baseurl; ?>/user/image/<?php echo $user->id; ?>/views">Más vistos</a> |
+                        <a href="<?php echo Yii::app()->request->baseurl; ?>/user/image/<?php echo $user->id; ?>/rating">Mejor calificados</a>
+                    </div>
+                    <div class="videoBlocks scroll-pane jspScrollable">
+                        <?php
+                        $this->renderPartial('/image/_blocks', array('images' => $images)
+                        );
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

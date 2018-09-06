@@ -1,0 +1,10 @@
+<?php //todo - tesing purposes needs discussion to depart from mvc
+$adDestonation = new eAdDestination('create');
+$adDestonation->setIsNewRecord(true);
+$adDestonation->setPrimaryKey(NULL);
+$adDestonation->ad_id = $ad->id;
+$adDestonation->user_id = ClientUtility::getUser()->id;
+$adDestonation->ip = $_SERVER['REMOTE_ADDR'];
+$adDestonation->url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+?>
+<a href="<?php echo $ad->url; ?>"><img src="/webassets/images/<?php echo $ad->filename; ?>"></a>

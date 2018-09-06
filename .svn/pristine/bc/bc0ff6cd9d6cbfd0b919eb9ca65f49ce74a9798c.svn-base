@@ -1,0 +1,14 @@
+<div style="width:800px; margin:0 auto; clear:both; padding-top:20px;">
+    <div style="float:left;">
+        <img src="/webassets/images/crowd.jpg" />
+    </div>
+    <div class="green" style="float:left;width:312px;padding:16px;height: 276px">
+        <h1>share the passion</h1>
+        <p style="color:#fff;text-align: justify;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
+        <a href="/questions"><button>record now</button></a>
+        <div style="margin-top:15px;">
+                <a href="<?php echo Yii::app()->request->baseurl; ?>/help" style="text-decoration: underline;font-size: 11px">¿Necesitas ayuda?</a>
+            </div>
+    </div>
+    <div class="clearFix"></div>
+</div>

@@ -1,0 +1,46 @@
+/* 
+    Document   : client
+    Created on : Apr 10, 2014, 10:44:09 AM
+    Author     : YouToo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+.flashMobile{
+    background-color: white;
+    color: black;
+    position:absolute;
+    width: auto;
+    z-index: 999;
+    opacity: 0.92;    
+
+    border:1px solid;
+    border-radius:15px;
+    /*box-shadow: 10px 10px 5px #888888;*/
+}
+.flashMobileContents{
+    padding:15px;
+}
+.flashMobileButton{
+    padding:5px;
+    text-align: center;
+}
+.flash-success h2{
+    color: black;
+}
+.errorMessage{
+    color: red;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #2578c1;
+}
+.sidebar a.activePage{
+    background-color:#008711;
+    color:white;
+}
+

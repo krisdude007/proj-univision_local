@@ -1,0 +1,19 @@
+<div class="fabmob_content-container">
+    <h2 id="fabmob_home-header" class="text-center">&iexcl;Bienvenido a Because Futbol!</h2>
+    <p id="fabmob_home-copy" class="text-center">
+        
+        Univision Deportes les agradece a todas aquellas personas que participaron en nuestro documental subiendo y enviando sus videos. 
+<br/>Te invitamos ahora a que veas todos los videos entrando aquí:
+
+    </p>
+    <!--<?php if (Yii::app()->user->isGuest): ?>
+        <a class="btn btn-block" target="_top" href="<?php echo Yii::app()->params['clientIframeUrl'] . rawurlencode('http://futbol.univision.com/fifa-copa-mundial/porelfutbol/') ?>">Sube un video</a>
+    <?php else: ?>
+        <a class="btn btn-block" href="/question">Sube un video</a>
+    <?php endif; ?>-->
+    <a class="btn btn-block" href="/videos">Ver Videos</a>
+     <br/>
+    <p id="fabmob_home-copy" class="text-center">
+
+        ¡Sintoniza Univision Deportes Network el domingo, 8 de Junio a las 10PM ET – 7PM PT para ver el documental y si tu video está en el proyecto final!</p>
+</div>

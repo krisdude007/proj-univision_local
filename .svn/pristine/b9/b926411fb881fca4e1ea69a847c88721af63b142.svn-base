@@ -1,0 +1,46 @@
+<div id="content">
+    <div class="you" style="width:915px;">
+        <?php
+        $this->renderPartial('/user/_sidebar', array(
+            'user' => $user,
+                )
+        );
+        ?>
+        <div class="verticalRule">
+        </div>
+        <div class="youContent">
+            <?php if (sizeof($videos) == 0): ?>
+                <h2 class="bold" style="margin-top:50px">
+                    <?php echo $question; ?>
+                </h2>
+                <h2 class="bold">
+                    ¡Haz clic en "Iniciar grabación" para empezar!
+                </h2>
+                <div>
+                    <div style="width:200px; margin-top:20px;">
+                        <a href="<?php echo Yii::app()->request->baseurl; ?>/questions" style="color:white;text-transform: uppercase;text-decoration: none;">
+                            <div class="darkOrange" style="padding:10px 30px; text-align: center;font-weight: bold;">GRABA AHORA</div>
+                        </a>
+                    </div>
+                </div>
+            <?php else: ?>
+                <div style="text-align:center; width:545px;">
+                    <div style="float:right; margin-top: 5px;"><a class="uploadButton" href="/questions" style="width:90px; height: 25px; font-size: 18px;margin-right: 43px; margin-top:0px;text-align: center;">SUBIR</a></div>
+                    <h1>TUS VIDEOS</h1>
+                    <div class="sorter" style="font-size:12px;margin-bottom:5px;">Ver por: &nbsp;&nbsp;
+                <a class="activeLink" href="<?php echo Yii::app()->request->baseurl; ?>/you/recent">Más popular</a> &nbsp;&nbsp;&nbsp;
+                <a href="<?php echo Yii::app()->request->baseurl; ?>/you/views">Más vistos</a> &nbsp;&nbsp;&nbsp;
+                <a href="<?php echo Yii::app()->request->baseurl; ?>/you/rating">Mejor calificados</a>
+                    </div>
+                    <div class="videoBlocks scroll-pane jspScrollable">
+                        <?php
+                        $this->renderPartial('/video/_blocks', array('videos' => $videos)
+                        );
+                        ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="placeHolder"><?php $this->renderPartial('//ads/_rightColumn', array('ad' => $ad)); ?></div>
+</div>

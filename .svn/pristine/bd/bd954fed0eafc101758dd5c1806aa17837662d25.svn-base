@@ -1,0 +1,16 @@
+<?php
+$cs = Yii::app()->getClientScript();
+$cs->registerScript('question', 'alert(window.parent.location.href);', CClientScript::POS_READY);
+?>
+<div class="fabmob_content-container">
+    <h2 id="fabmob_home-header" class="text-center">&iexcl;Bienvenido a Because Futbol!</h2>
+    <p id="fabmob_home-copy" class="text-center">
+        Univisi&oacute;n Deportes te invita a ser parte de nuestro documental, una historia de f&uacute;tbol, contada a trav&eacute;s de fan&aacute;ticos de todas partes del mundo. &iexcl; Regístrate YA! Sube uno o varios videos y se parte de un documental de la gente, para la gente.
+    </p>
+    <?php if (Yii::app()->user->isGuest): ?>
+        <a class="btn btn-block" target="_top" href="<?php echo UNIVISION_REDIRECT_URL.rawurlencode('http://futbol.univision.com/fifa-copa-mundial/porelfutbol/#question') ?>">Sube un video</a>
+        <?php else: ?>
+        <a class="btn btn-block" href="/question">Sube un video</a>
+    <?php endif; ?>
+    <a class="btn btn-block" href="/videos">Ver Videos</a>
+</div>
